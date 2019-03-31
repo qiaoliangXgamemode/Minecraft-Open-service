@@ -1,0 +1,12 @@
+D:\repos\Minecraft Open service\Minecraft Open service\bin\Debug\Minecraft Open service.pdb
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft Open service.csprojAssemblyReference.cache
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft_Open_service.Form1.resources
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft_Open_service.Properties.Resources.resources
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft Open service.csproj.GenerateResource.cache
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft Open service.csproj.CoreCompileInputs.cache
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft Open service.pdb
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft_Open_service.Form2.resources
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft_Open_service.Form3.resources
+D:\repos\Minecraft Open service\Minecraft Open service\bin\Debug\Minecraft Open service.exe.config
+D:\repos\Minecraft Open service\Minecraft Open service\bin\Debug\Minecraft Open service.exe
+D:\repos\Minecraft Open service\Minecraft Open service\obj\Debug\Minecraft Open service.exe
