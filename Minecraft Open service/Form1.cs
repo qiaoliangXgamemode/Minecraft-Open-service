@@ -272,5 +272,10 @@ namespace Minecraft_Open_service
             this.pictureBox5.BackColor = Color.White;
             this.label5.BackColor = Color.White;
         }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer", "https://qiaoliangxgamemode.github.io/Minecraft-Open-service/");
+        }
     }
 }
