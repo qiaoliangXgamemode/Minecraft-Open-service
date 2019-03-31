@@ -21,6 +21,10 @@ namespace Minecraft_Open_service
             InitializeComponent();
         }
 
+        public Form1(Form2 form2)
+        {
+        }
+
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         [DllImport("user32.dll")]
@@ -34,6 +38,7 @@ namespace Minecraft_Open_service
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             Form2 form2 = new Form2();
             if (File.Exists(Application.StartupPath + @"\jar.ini"))
                            {
@@ -172,7 +177,7 @@ namespace Minecraft_Open_service
         private void Label7_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "java(*.jar)|*.jar";
-            this.openFileDialog1.FileName = "请找到开服的jar";
+            this.openFileDialog1.FileName = "请找到开服的核心";
             openFileDialog1.InitialDirectory = Application.StartupPath+ @"\";
             openFileDialog1.ShowDialog();
             textBox4.Text = openFileDialog1.FileName;
@@ -183,7 +188,7 @@ namespace Minecraft_Open_service
         private void PictureBox7_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "java(*.jar)|*.jar";
-            this.openFileDialog1.FileName = "请找到开服的jar";
+            this.openFileDialog1.FileName = "请找到开服的核心";
             openFileDialog1.InitialDirectory = Application.StartupPath + @"\";
             openFileDialog1.ShowDialog();
             textBox4.Text = openFileDialog1.FileName;
@@ -216,12 +221,56 @@ namespace Minecraft_Open_service
 
         private void PictureBox6_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            timer3.Enabled = true;
         }
 
         private void TextBox3_TextChanged(object sender, EventArgs e)
         {
            
     }
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
+            this.Opacity += 0.02;
+            if (this.Opacity == 100) {
+                timer2.Enabled = false;
+            };
+        }
+
+        private void Timer3_Tick(object sender, EventArgs e)
+        {
+            timer2.Enabled = false;
+            this.Opacity -= 0.03;
+            if (this.Opacity == 0)
+            {
+                this.WindowState = FormWindowState.Minimized;
+                this.Opacity = 100;
+                timer3.Enabled = false;
+            };
+        }
+
+        private void PictureBox5_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+        }
+
+        private void PictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox5.BackColor = Color.White;
+            this.label5.BackColor = Color.White;
+        }
+
+        private void Label5_MouseEnter(object sender, EventArgs e)
+        {
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+        }
+
+        private void Label5_MouseLeave(object sender, EventArgs e)
+        {
+            this.pictureBox5.BackColor = Color.White;
+            this.label5.BackColor = Color.White;
+        }
     }
 }

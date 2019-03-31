@@ -51,6 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.timer3 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -223,7 +225,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(755, 28);
             this.textBox4.TabIndex = 12;
-            this.textBox4.Text = "开服的jar";
+            this.textBox4.Text = "开服的核心";
             this.textBox4.WordWrap = false;
             // 
             // pictureBox5
@@ -235,6 +237,8 @@
             this.pictureBox5.TabIndex = 13;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.PictureBox5_MouseEnter);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.PictureBox5_MouseLeave);
             // 
             // label5
             // 
@@ -246,6 +250,8 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "打开";
             this.label5.Click += new System.EventHandler(this.Label5_Click);
+            this.label5.MouseEnter += new System.EventHandler(this.Label5_MouseEnter);
+            this.label5.MouseLeave += new System.EventHandler(this.Label5_MouseLeave);
             // 
             // label7
             // 
@@ -302,6 +308,17 @@
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.PictureBox6_Click);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1;
+            this.timer2.Tick += new System.EventHandler(this.Timer2_Tick);
+            // 
+            // timer3
+            // 
+            this.timer3.Interval = 1;
+            this.timer3.Tick += new System.EventHandler(this.Timer3_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -331,6 +348,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "我的世界开服器简易版1.2V";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -372,6 +390,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        public System.Windows.Forms.Timer timer2;
+        public System.Windows.Forms.Timer timer3;
     }
 }
 
